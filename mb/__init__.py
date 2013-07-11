@@ -6,6 +6,8 @@ __author__ = [
     "Carl Chen <chengx168000@outlook.com>"
 ]
 
-import conf
+import config
+import template
 
-from conf import *
+from config import *
+from template import *

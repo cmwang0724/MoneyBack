@@ -1,16 +1,15 @@
+# -*- coding: utf-8 -*-
 import web
 import mb
 
 class home:
 	def GET(self):
-		render = web.template.render('templates/', base='layout')
-		return render.test()
-#		return "Hey, world!!! I am back!!!"
+		return mb.template.render("hello", name="Carl")
 
 class redirect:
 	def GET(self, path):
 		web.seeother('/' + path)
 
 if __name__ == "__main__":
-	app = web.application(mb.conf.urls, globals())
+	app = web.application(mb.config.urls, globals())
 	app.run()
