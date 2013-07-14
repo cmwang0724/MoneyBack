@@ -7,7 +7,9 @@ __author__ = [
 ]
 
 import config
+import logger
 import template
 
 from config import *
+from logger import *
 from template import *

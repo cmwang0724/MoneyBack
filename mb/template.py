@@ -5,6 +5,7 @@ Created on Jul 11, 2013
 '''
 import os
 from jinja2 import Environment,FileSystemLoader,TemplateNotFound
+from mb.logger import MBLogger
 
 def render(templateName, **context):
     extensions = context.pop('extensions', [])
@@ -19,9 +20,9 @@ def render(templateName, **context):
     try:
         return jinjaEnv.get_template(templateName + ".html").render(context)
     except TemplateNotFound:
-        print "Cannot find the template in " + templatePath
+        MBLogger.error("Cannot find the template[" + templateName + "] in " + templatePath)
         return "Cannot find the template."
     except:
         errorInfo = os.sys.exc_info()
-        print "Error '%s' happened on line %d\n" % (errorInfo[0], errorInfo[2].tb_lineno)
+        MBLogger.error("Error '%s' happened on line %d\n" % (errorInfo[0], errorInfo[2].tb_lineno))
         return "Error occurred while rendering the template."
