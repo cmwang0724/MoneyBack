@@ -9,7 +9,9 @@ __author__ = [
 import config
 import logger
 import template
+import controller
 
 from config import *
 from logger import *
 from template import *
+from controller import *
