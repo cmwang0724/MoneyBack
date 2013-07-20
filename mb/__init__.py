@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #!/usr/bin/env python
 """mb.py: money back web apps (http://...)"""
 
@@ -9,9 +10,9 @@ __author__ = [
 import config
 import logger
 import template
-import controller
+import coordinator
 
 from config import *
 from logger import *
 from template import *
-from controller import *
+from coordinator import *

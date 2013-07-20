@@ -1,5 +1,19 @@
-#Thu Jul 11 17:12:31 CST 2013
+#Sat Jul 20 15:41:40 CST 2013
 eclipse.preferences.version=1
 encoding//jinja2/environment.py=utf-8
 encoding//jinja2/utils.py=utf-8
+encoding//mb/__init__.py=utf-8
+encoding//mb/cache.py=utf-8
+encoding//mb/caretaker.py=utf-8
+encoding//mb/config.py=utf-8
+encoding//mb/coordinator.py=utf-8
+encoding//mb/dbl.py=utf-8
+encoding//mb/exceptions.py=utf-8
+encoding//mb/fs.py=utf-8
+encoding//mb/genius.py=utf-8
+encoding//mb/gurad.py=utf-8
+encoding//mb/logger.py=utf-8
+encoding//mb/spider.py=utf-8
+encoding//mb/template.py=utf-8
+encoding//mb/utils.py=utf-8
 encoding/main.py=utf-8

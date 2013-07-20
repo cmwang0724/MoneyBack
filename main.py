@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
+'''
+Created on Jul 8, 2013
 
-from mb.config import urls
-from mb.controller import *
-from mb.carekeeper import CareKeeper
+@author: Carl
+'''
 
-_careKeeper = CareKeeper()
+from mb.caretaker import Caretaker
+
+_Caretaker = Caretaker()
 
 if __name__ == "__main__":
-	_careKeeper.start()
-	app = web.application(urls, globals())
-	app.run()
+	_Caretaker.start()
