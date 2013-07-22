@@ -1,8 +1,90 @@
 # version 1.0.0
 
-.apps-section {
+/* = 通用 Global
+----------------------------------------------- */
+body {
+	background: #e5e5e5 url(/static/img/default/mooning.png);
+	overflow-x: hidden;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+img.profile {
+	max-width: 100px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	transition: 500ms;
+	
+	-webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+}
+
+a.thumbnail {
+	color: #333;
+	text-decoration: none;
+}
+a.thumbnail:hover {
+	-webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+	color: #333;
+
+}
+a.thumbnail img {
+	-webkit-filter: blur(1px) grayscale(0.8);
+	-webkit-transform: translateZ(0);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+a.thumbnail:hover img {
+	-webkit-filter: none;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+a.thumbnail h3 {
+	font: 400 24.5px/1.0 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	-webkit-box-reflect: below -4px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
+}
+a.thumbnail p {
+	font: 100 12px/1.6 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+}
+a.thumbnail small {
+	font-size: 95%;
+}
+
+img, p {
+	-webkit-touch-callout: none;
+}
+p {
+	font: 500 15px/1.8 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	cursor: default;
+}
+.padding-huge {
+	padding: 27px;
+}
+.padding-large {
+	padding: 45px;
+}
+.padding-middle {
+	padding: 25px;
+}
+.no-radius {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;	
+}
+
+.sites-section {
 	position: relative;
-	height: 500px;
 	-webkit-animation: description-in 1s ease-out 0 1 forwards;
 }
 
@@ -32,74 +114,64 @@
           border-radius: 500px;
 }
 
-.thumbnails {
-  margin-left: -20px;
-  list-style: none;
-  *zoom: 1;
+/* = 框架 Panels
+----------------------------------------------- */
+.panel {
+	display: none;
+	background: #FFF url(/static/img/default/white_wall_hash.png);
+	padding: 0px;
+	margin-bottom: 120px;
+	color: #333;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-animation: panel-in 1s linear 0 1;
+	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+}
+.panel h1, .panel h3 {
+	cursor: default;
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+.panel h3 {
+	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
+}
+.panel h1:hover {
+	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 70%,rgba(10, 14, 10, 1) 71%,rgba(10, 8, 9, 1) 100%);
+	-webkit-box-reflect: below -2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;	
+	-webkit-transform: translateY(-5px);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
 }
 
-.thumbnails {
-  margin-left: -20px;
-  list-style: none;
-  *zoom: 1;
+/**** footer*/
+.ft-info {
+	background: #F7F7F7;
+	padding:7px 0;
+	margin-bottom: 10px;
 }
-
-.thumbnails:before,
-.thumbnails:after {
-  display: table;
-  line-height: 0;
-  content: "";
+.ft-info p {
+	line-height:20px;
+	font: 100 12px/1.6 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
 }
-
-.thumbnails:after {
-  clear: both;
+.ft-info a:link, .ft-info a:visited {
+	color:#75839D;
 }
-
-.row-fluid .thumbnails {
-  margin-left: 0;
-}
-
-.thumbnails > li {
-  float: left;
-  margin-bottom: 20px;
-  margin-left: 20px;
-}
-
-.thumbnail {
-  display: block;
-  padding: 4px;
-  line-height: 20px;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  -webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-}
-
-a.thumbnail:hover,
-a.thumbnail:focus {
-  border-color: #0088cc;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-     -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-          box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-}
-
-.thumbnail > img {
-  display: block;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.thumbnail .caption {
-  padding: 9px;
-  color: #555555;
+.ft-info a:hover, .ft-info a:active {
+	color:#ff8400;
+	text-decoration:underline;
 }
 
 /* = IE 8 以下 IE 8 or below

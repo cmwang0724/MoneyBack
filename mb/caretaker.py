@@ -7,6 +7,7 @@ Created on Jul 18, 2013
 
 from mb.config import urls
 from mb.coordinator import *
+from web.webapi import HTTPError
 
 class Caretaker(object):
     '''
@@ -20,9 +21,25 @@ class Caretaker(object):
     
     def start(self):
         self.startWebServer()
-    
+            
     def startWebServer(self):
         MBLogger.info('Starting Server ...')
-        app = web.application(urls, globals())
+        web.webapi.notfound = noPage
+        web.webapi.internalerror = noPage
         web.config.debug = False
+        app = web.application(urls, globals())
         app.run()
+
+class _NotFound(HTTPError):
+    """`404 Not Found` error."""
+    message = "not found1111111"
+    def __init__(self, message=None):
+        status = '404 Not Found'
+        headers = {'Content-Type': 'text/html'}
+        HTTPError.__init__(self, status, headers, message or self.message)
+
+def noPage(message=None):
+    if message:
+        return _NotFound(message)
+    else:
+        return _NotFound()

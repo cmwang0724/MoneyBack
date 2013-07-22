@@ -3,126 +3,85 @@
 还在等什么，同样的商品，用更少的钱买！！！
 {% endblock%}
 {% block css %}
-{{super()}}
 <link rel="stylesheet" href="/static/css/style.css" type="text/css" charset="utf-8"/>
 <link rel="stylesheet" href="/static/css/responsive.css" type="text/css" charset="utf-8"/>
+{{super()}}
 {% endblock %}
 {% block js %}
-{{super()}}
 <script src="/static/js/jquery.js" type="text/javascript"></script>
 <script src="/static/js/scripts.js" type="text/javascript"></script>
+{{super()}}
 {% endblock %}
 {% block style %}
-<style>
-	/* = 通用 Global
-	----------------------------------------------- */
-	body {
-		background: #e5e5e5 url(/static/img/default/mooning.png);
-		overflow-x: hidden;
-		-webkit-user-select: none;
-		-webkit-tap-highlight-color: rgba(0,0,0,0);
-	}
-	
-	img.profile {
-		max-width: 100px;
-		margin-top: 5px;
-		margin-bottom: 10px;
-		-webkit-transition: 500ms;
-		-moz-transition: 500ms;
-		transition: 500ms;
-		
-		-webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-		-moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-		box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-	}
-	
-	a.thumbnail {
-		color: #333;
-		text-decoration: none;
-	}
-	a.thumbnail:hover {
-		-webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-		-moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-		box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-		color: #333;
-	
-	}
-	a.thumbnail img {
-		-webkit-filter: blur(1px) grayscale(0.8);
-		-webkit-transform: translateZ(0);
-		-webkit-transition: .5s;
-		-moz-transition: .5s;
-		transition: .5s;
-		
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
-		border-radius: 3px;
-	}
-	a.thumbnail:hover img {
-		-webkit-filter: none;
-		-webkit-transition: .5s;
-		-moz-transition: .5s;
-		transition: .5s;
-	}
-	a.thumbnail h3 {
-		font: 400 24.5px/1.0 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
-		-webkit-box-reflect: below -4px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
-	}
-	a.thumbnail p {
-		font: 100 12px/1.6 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
-	}
-	a.thumbnail small {
-		font-size: 95%;
-	}
-</style>
+<style></style>
 {% endblock %}
 {% block content %}
-{% include 'bad_experience_alert.html' ignore missing %}
-<div id="appcenter" class="row apps-section">
-    <div class="span10 apps-panel button-text-panel text-center">
-    	<div class="padding-middle">
-           <img class="profile img-circle" src="/static/img/{{type if type else 'default'}}/picture.jpg">
-        </div>
-    </div>
-    <br/>
-    <div class="row">    
-	    <div class="span6 offset3">
-	        <ul class="thumbnails">
-	            <li class="span2">
-	                <a class="thumbnail" href="http://www.baidu.com" target="_blank">
-	                    <img src="/static/img/{{type if type else 'default'}}/picture.jpg" data-src="/static/img/{{type if type else 'default'}}/picture.jpg" alt="">
-	                    <h3>2013</h3>
-	                    <p><small>返利，返利</small></p>
-	                </a>
-	            </li>                             
-	            
-	            <li class="span2">
-	                <a class="thumbnail" href="http://www.baidu.com" target="_blank">
-	                    <img src="/static/img/{{type if type else 'default'}}/picture.jpg" data-src="/static/img/{{type if type else 'default'}}/picture.jpg" alt="">
-	                    <h3>2013</h3>
-	                    <p><small>返利，返利</small></p>
-	                </a>
-	            </li>   
-	            
-	            <li class="span2">
-	                <a class="thumbnail" href="http://www.baidu.com" target="_blank">
-	                    <img src="/static/img/{{type if type else 'default'}}/picture.jpg" data-src="/static/img/{{type if type else 'default'}}/picture.jpg" alt="">
-	                    <h3>2013</h3>
-	                    <p><small>返利，返利</small><br><br></p>
-	                </a>
-	            </li>
+<div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+		<div class="nav-collapse collapse">
+	        <ul class="nav">
+	            <li class="active"><a href="#banner">简述</a></li>
+	            <li><a href="#travel">旅行</a></li>
+	            <li><a href="#photography">摄影</a></li>
+	            <li><a href="#creativity">创造</a></li>
+	            <li><a href="#apple">苹果</a></li>
+	            <li><a href="#contact">联系</a></li>
+	            <li><a href="#about">关于</a></li>
 	        </ul>
-	    </div>
-	</div>
+		</div>
+	    <ul class="nav">
+	
+	        <li><a href="http://blog.dandyweng.com" target="_blank">博客</a></li>
+	        <li><a href="http://www.camarts.cn" target="_blank">作品</a></li>
+	        <li><a href="http://weibo.com/dandyweng" target="_blank">微博</a></li>
+	    </ul>
+    </div>
+  </div>
 </div>
-
-<br/><br/><br/><br/><br/><br/>
-Test Content
-<br/><br/>
-51 - 4.11.3 Macros
-52 - 4.11.4 Call
-... (very useful, such as include)
-<br/><br/>
-{% endblock %}
-{% block footer %}
+{% include 'bad_experience_alert.html' ignore missing %}
+<header id="banner" class="hero-unit no-radius">
+	<div class="container text-center">
+        <h1>Hello world</h1>
+    </div>
+</header>
+<article class="container"> 
+	<section id="sites" class="row sites-section">
+	    <div class="span12 apps-panel button-text-panel text-center">
+	    	<div class="padding-large">
+	           <img class="profile img-circle" src="/static/img/{{type if type else 'default'}}/picture.jpg">
+	        </div>
+		    <div class="row">    
+			    <div class="span10 offset1">
+			        <ul class="thumbnails">
+			        	{% for i in range(20)%}
+			            <li class="span2">
+			                <a class="thumbnail" href="http://www.baidu.com" target="_blank">
+			                    <img src="/static/img/{{type if type else 'default'}}/picture.jpg" data-src="/static/img/{{type if type else 'default'}}/picture.jpg" alt="">
+			                    <h3>2013</h3>
+			                    <p><small>哇哦</small></p>
+			                </a>
+			            </li>
+			            {% endfor %}                         
+			        </ul>
+			    </div>
+			</div>
+	    </div>
+	</section>
+</article>
+<footer>
+	<div class="row">
+		<div class="span12 text-center">
+			<div class="span10 offset1 ft-info">
+				<a href="{{hostUrl}}/about_us">关于我们</a> ┊ <a href="#">大事记</a> ┊ <a href="#">广告服务</a> ┊ <a href="#">联系我们</a>
+			</div>
+            <p><small>Copyright &copy;2013 - 2015 moneyback.com. All Rights Reserved.</p> 
+		</div>
+	</div>
+</footer>
 {% endblock %}
