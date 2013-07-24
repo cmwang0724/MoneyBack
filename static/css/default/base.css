@@ -2,12 +2,6 @@
 
 /* = 通用 Global
 ----------------------------------------------- */
-body {
-	background: #e5e5e5 url(/static/img/default/mooning.png);
-	overflow-x: hidden;
-	-webkit-user-select: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
 
 img.profile {
 	max-width: 100px;
@@ -20,45 +14,6 @@ img.profile {
 	-webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
 	box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-}
-
-a.thumbnail {
-	color: #333;
-	text-decoration: none;
-}
-a.thumbnail:hover {
-	-webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-	box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
-	color: #333;
-
-}
-a.thumbnail img {
-	-webkit-filter: blur(1px) grayscale(0.8);
-	-webkit-transform: translateZ(0);
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
-	
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-a.thumbnail:hover img {
-	-webkit-filter: none;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
-}
-a.thumbnail h3 {
-	font: 400 24.5px/1.0 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
-	-webkit-box-reflect: below -4px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
-}
-a.thumbnail p {
-	font: 100 12px/1.6 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
-}
-a.thumbnail small {
-	font-size: 95%;
 }
 
 img, p {
@@ -112,6 +67,52 @@ p {
   -webkit-border-radius: 500px;
      -moz-border-radius: 500px;
           border-radius: 500px;
+}
+
+a.thumbnail {
+	color: #333;
+	text-decoration: none;
+}
+a.thumbnail:hover {
+	-webkit-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.1),1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+	color: #333;
+
+}
+a.thumbnail img {
+	-webkit-filter: blur(1px) grayscale(0.8);
+	-webkit-transform: translateZ(0);
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+a.thumbnail:hover img {
+	-webkit-filter: none;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+}
+a.thumbnail h3 {
+	font: 400 24.5px/1.0 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+	-webkit-box-reflect: below -4px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
+}
+a.thumbnail p {
+	font: 100 12px/1.6 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
+}
+a.thumbnail small {
+	font-size: 95%;
+}
+
+body {
+	background: #e5e5e5 url(/static/img/default/bg.png);
+	overflow-x: hidden;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /* = 框架 Panels
