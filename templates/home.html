@@ -16,38 +16,30 @@
 <style></style>
 {% endblock %}
 {% block content %}
-<div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-		<div class="nav-collapse collapse">
-	        <ul class="nav">
-	            <li class="active"><a href="#banner">简述</a></li>
-	            <li><a href="#travel">旅行</a></li>
-	            <li><a href="#photography">摄影</a></li>
-	            <li><a href="#creativity">创造</a></li>
-	            <li><a href="#apple">苹果</a></li>
-	            <li><a href="#contact">联系</a></li>
-	            <li><a href="#about">关于</a></li>
-	        </ul>
+<div id="topbar">
+	<div class="row">
+		<div class="span11 offset1 text-center">
+			<ul class="nav nav-pills nav-btn pull-right">
+	        	<li class="active"><a href="#">登录</a></li>
+	            <li><a href="#">注册</a></li>
+	    	</ul>
 		</div>
-	    <ul class="nav">
-	
-	        <li><a href="http://blog.dandyweng.com" target="_blank">博客</a></li>
-	        <li><a href="http://www.camarts.cn" target="_blank">作品</a></li>
-	        <li><a href="http://weibo.com/dandyweng" target="_blank">微博</a></li>
-	    </ul>
-    </div>
-  </div>
+	</div>
 </div>
 {% include 'bad_experience_alert.html' ignore missing %}
-<header id="banner" class="hero-unit no-radius">
-	<div class="container text-center">
-        <h1>Hello world</h1>
+<header id="banner" class="no-radius">
+	<div class="row">
+		<div class="span11 offset1 text-center">
+	        <div class="logo padding-middle span1">
+	           <img src="/static/img/{{type if type else 'default'}}/picture.png">
+	        </div>
+	        <div class="search padding-middle span4 offset1">
+	        	<form class="form-search">
+				  <input type="text" class="input-large">
+				  <button type="submit" class="btn btn-info">Search</button>
+				</form>
+	        </div>
+		</div>
     </div>
 </header>
 <article class="container"> 
@@ -59,7 +51,7 @@
 		    <div class="row">    
 			    <div class="span10 offset1">
 			        <ul class="thumbnails">
-			        	{% for i in range(20)%}
+			        	{% for i in range(10)%}
 			            <li class="span2">
 			                <a class="thumbnail" href="http://www.baidu.com" target="_blank">
 			                    <img src="/static/img/{{type if type else 'default'}}/picture.png" data-src="/static/img/{{type if type else 'default'}}/picture.png" alt="">
@@ -76,8 +68,8 @@
 </article>
 <footer>
 	<div class="row">
-		<div class="span12 text-center">
-			<div class="span10 offset1 ft-info">
+		<div class="span11 offset1 text-center">
+			<div class="ft-info">
 				<a href="{{hostUrl}}/about_us">关于我们</a> ┊ <a href="#">大事记</a> ┊ <a href="#">广告服务</a> ┊ <a href="#">联系我们</a>
 			</div>
             <p><small>Copyright &copy;2013 - 2015 moneyback.com. All Rights Reserved.</p> 

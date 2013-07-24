@@ -34,11 +34,11 @@ class Pretty(object):
     def handle(self, errno):
         web.seeother('/error/' + str(errno))
         
-    def page_404(self):
-        return _Template.render("page_404")
+    def handle404(self):
+        return _Template.render("handle404")
 
-    def page_500(self):
-        return _Template.render("page_500")
+    def handle500(self):
+        return _Template.render("handle500")
     
 #以好看的样式处理错误    
 _Pretty = Pretty()
@@ -49,8 +49,8 @@ class Error:
     '''
     def __init__(self):
         self._mapping = {
-            ERROR_NO_404_STR : lambda : _Pretty.page_404(),
-            ERROR_NO_500_STR : lambda : _Pretty.page_500()
+            ERROR_NO_404_STR : lambda : _Pretty.handle404(),
+            ERROR_NO_500_STR : lambda : _Pretty.handle500()
         }
     def GET(self, errno):
         return self._mapping[str(errno)]()
@@ -60,14 +60,14 @@ class _NotFound(HTTPError):
     def __init__(self):
         status = '404 Not Found'
         headers = {'Content-Type': 'text/html'}
-        HTTPError.__init__(self, status, headers, _Pretty.page_404())
+        HTTPError.__init__(self, status, headers, _Pretty.handle404())
         
 class _InternalError(HTTPError):
     """500 Internal Server Error`."""
     def __init__(self):
         status = '500 Internal Server Error'
         headers = {'Content-Type': 'text/html'}
-        HTTPError.__init__(self, status, headers, _Pretty.page_500())
+        HTTPError.__init__(self, status, headers, _Pretty.handle500())
 
 def NotFound(message=None):
     """Returns HTTPError with '404 Not Found' error from the active application.

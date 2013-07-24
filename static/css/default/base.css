@@ -3,35 +3,27 @@
 /* = 通用 Global
 ----------------------------------------------- */
 
-img.profile {
-	max-width: 100px;
-	margin-top: 5px;
-	margin-bottom: 10px;
-	-webkit-transition: 500ms;
-	-moz-transition: 500ms;
-	transition: 500ms;
-	
-	-webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-	box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
-}
-
 img, p {
 	-webkit-touch-callout: none;
 }
+
 p {
 	font: 500 15px/1.8 'Optima','Songti SC','Verdana','Microsoft Yahei',simsun,serif;
 	cursor: default;
 }
+
 .padding-huge {
 	padding: 27px;
 }
+
 .padding-large {
 	padding: 45px;
 }
+
 .padding-middle {
 	padding: 25px;
 }
+
 .no-radius {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
@@ -44,7 +36,8 @@ p {
 }
 
 .apps-panel {
-	background: rgba(255, 255, 255, 0.80);
+#	background: rgba(255, 255, 255, 0.80);
+	background: #e5e5e5 url(/static/img/default/panel_bg.png);
 	color: #333;
 	padding: 0px;
 	margin-bottom: 80px;
@@ -57,16 +50,6 @@ p {
 	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);  
 	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
 	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, 0.25), 0px 20px 70px 8px rgba(0, 0, 0, 0.05);
-}
-
-.padding-middle {
-	padding: 25px;
-}
-
-.img-circle {
-  -webkit-border-radius: 500px;
-     -moz-border-radius: 500px;
-          border-radius: 500px;
 }
 
 a.thumbnail {
@@ -115,51 +98,26 @@ body {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-/* = 框架 Panels
------------------------------------------------ */
-.panel {
-	display: none;
-	background: #FFF url(/static/img/default/white_wall_hash.png);
-	padding: 0px;
-	margin-bottom: 120px;
-	color: #333;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	-webkit-animation: panel-in 1s linear 0 1;
-	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
-	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+img.profile {
+	max-width: 60px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	-webkit-transition: 500ms;
+	-moz-transition: 500ms;
+	transition: 500ms;
+	-webkit-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.7), 0px 0px 30px 8px rgba(0, 0, 0, 0.25);
 }
-.panel h1, .panel h3 {
-	cursor: default;
-	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
-	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
+img.profile:hover {
+	-webkit-animation: profile-img-hover 1000ms ease-out 100ms infinite forwards;
 }
-.panel h3 {
-	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
-}
-.panel h1:hover {
-	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 70%,rgba(10, 14, 10, 1) 71%,rgba(10, 8, 9, 1) 100%);
-	-webkit-box-reflect: below -2px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));	
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;	
-	-webkit-transform: translateY(-5px);
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;
+img.profile:active {
+	-webkit-animation: profile-img-active 500ms linear 0 infinite forwards;
 }
 
 /**** footer*/
 .ft-info {
-	background: #F7F7F7;
 	padding:7px 0;
 	margin-bottom: 10px;
 }
@@ -175,6 +133,22 @@ body {
 	text-decoration:underline;
 }
 
+/**** topbar*/
+#topbar {
+	border-top: 4px solid #0088cc;
+}
+
+.nav-btn > li > a {
+	margin-top: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+/**** banner*/
+#banner {
+}
+
 /* = IE 8 以下 IE 8 or below
 ----------------------------------------------- */
 
@@ -183,4 +157,47 @@ body {
 	top: 50px;
 	width: 630px;
 	z-index: 9999;	
+}
+
+/* = 伪类 Pseudo
+----------------------------------------------- */
+::-webkit-scrollbar {
+	width: 10px;
+	background: #cacaca url(/static/img/default/bg.png);;
+	opacity: .8;	
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-button {
+	width: 10px;
+	height: 5px;
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-track {
+	background: #cacaca url(/static/img/default/bg.png);;
+	border-radius: 10px;
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-thumb {
+	background: #969696;
+	border-radius: 10px;
+	-webkit-transition: .25s;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #7d7d7d;
+	-webkit-transition: .25s;
+}
+
+::selection {
+    background:#d3d3d3; 
+    color:#555;
+}
+
+::-moz-selection {
+    background:#d3d3d3; 
+    color:#555;
+}
+
+::-webkit-selection {
+    background:#d3d3d3; 
+    color:#555;
 }
