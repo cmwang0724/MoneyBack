@@ -26,6 +26,10 @@ class Redirect:
     def GET(self, path):
         web.seeother('/' + path)
         
+class AboutUs:
+    def GET(self):
+        return _Template.render("about_us")
+        
 class Pretty(object):
     def handleError(self, message, errno):
         MBLogger.error(message)
@@ -35,10 +39,10 @@ class Pretty(object):
         web.seeother('/error/' + str(errno))
         
     def handle404(self):
-        return _Template.render("handle404")
+        return _Template.render("page_404")
 
     def handle500(self):
-        return _Template.render("handle500")
+        return _Template.render("page_500")
     
 #以好看的样式处理错误    
 _Pretty = Pretty()

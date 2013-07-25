@@ -10,7 +10,8 @@ import string
 urls = (
     '/', 'Home',
     '/(.*)/', 'Redirect',
-    '/error/(\d+)', 'Error'
+    '/error/(\d+)', 'Error',
+    '/about_us', 'AboutUs'
 )
 
 ERROR_NO_404_STR = "404"
