@@ -27,50 +27,51 @@
 	</div>
 </div>
 {% include 'bad_experience_alert.html' ignore missing %}
-<header id="banner" class="no-radius">
-	<div class="row">
-		<div class="span11 offset1 text-center">
-	        <div class="logo padding-middle span1">
-	           <img src="/static/img/{{type if type else 'default'}}/picture.png">
-	        </div>
-	        <div class="search padding-middle span4 offset1">
-	        	<form class="form-search">
-				  <input type="text" class="input-large">
-				  <button type="submit" class="btn btn-info">Search</button>
-				</form>
-	        </div>
-		</div>
-    </div>
+<header id="banner" class="fixedContainer no-radius">
+	<div class="">
+        <div class="logo" style="display:none;">
+           <img src="/static/img/{{type if type else 'default'}}/picture1.png">
+        </div>
+    	<div id="search" class="search">
+    		<form id="searchF" name="searchF" method="get" action="/search">
+    			<div class="searchBoxOutter">
+    				<div id="searchBoxInner" class="searchBoxInner">
+    					<div id="searchBox" class="searchBox">
+    						<input id="searchI" name="searchI" type="text" autocomplete="off" value="" placeholder="搜索">
+    					</div>
+    				</div>
+    			</div>
+    			<div id="searchBtnC">
+					<button id="searchBtn" class="searchBtn">
+						<span class="searchBtnIcon"></span>
+					</button>
+				</div>
+    		</form>
+    	</div>
+	</div>
 </header>
-<article class="container"> 
-	<section id="sites" class="row sites-section">
-	    <div class="span12 text-center">
-		    <div class="row">    
-			    <div class="span10 offset1">
-			        <ul class="thumbnails">
-			        	{% for i in range(10)%}
-			            <li class="span2">
-			                <a class="thumbnail" href="http://www.baidu.com" target="_blank">
-			                    <img src="/static/img/{{type if type else 'default'}}/picture.png" data-src="/static/img/{{type if type else 'default'}}/picture.png" alt="">
-			                    <h3>2013</h3>
-			                    <p><small>哇哦</small></p>
-			                </a>
-			            </li>
-			            {% endfor %}                         
-			        </ul>
-			    </div>
-			</div>
-	    </div>
+<article class="fixedContainer"> 
+	<section id="sites">
+	    <ul>
+	    	{% for i in range(12)%}
+	        <li class="card text-center">
+	            <a class="" href="http://www.baidu.com" target="_blank">
+	                <img src="/static/img/{{type if type else 'default'}}/picture.png" data-src="/static/img/{{type if type else 'default'}}/picture.png" alt="">
+	                <p><small>哇哦</small></p>
+	            </a>
+	            <div class="s_info hide">OOO</div>
+	        </li>
+	        {% endfor %}                         
+	    </ul>
 	</section>
 </article>
-<footer>
-	<div class="row">
-		<div class="span11 offset1 text-center">
-			<div class="ft-info">
-				<a href="{{hostUrl}}/about_us">关于我们</a> ┊ <a href="#">大事记</a> ┊ <a href="#">广告服务</a> ┊ <a href="#">联系我们</a>
-			</div>
-            <p><small>Copyright &copy;2013 - 2015 moneyback.com. All Rights Reserved.</p> 
+<footer class="fixedContainer no-radius">
+	<div class="text-center">
+		<div class="ft-info">
+			<hr class="divider">
+			<a href="{{hostUrl}}/about_us">关于我们</a> ┊ <a href="#">大事记</a> ┊ <a href="#">广告服务</a> ┊ <a href="#">联系我们</a>
 		</div>
+	    <p><small>Copyright &copy;2013 - 2015 moneyback.com. All Rights Reserved.</p>
 	</div>
 </footer>
 {% endblock %}
