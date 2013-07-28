@@ -26,6 +26,16 @@
 					</a>
 				</li>
 				<li>
+					<a class="nav-link" id="fanfan" href="#">
+						<span class="name"><strong>返返</strong></span>
+					</a>
+				</li>
+				<li>
+					<a class="nav-link" id="bijia" href="#">
+						<span class="name"><strong>比价</strong></span>
+					</a>
+				</li>
+				<li>
 					<a class="nav-link" id="blog" href="#">
 						<span class="name"><strong>博客</strong></span>
 					</a>
@@ -38,7 +48,7 @@
 			</ol>
 		</div>
 	</div>
-	<div class="row">
+	<div class="user row">
 		<div class="span11 offset1 text-center">
 			<ul class="nav nav-pills nav-btn pull-right">
 	        	<li class="active"><a href="#">登录</a></li>
@@ -49,26 +59,22 @@
 </div>
 {% include 'bad_experience_alert.html' ignore missing %}
 <header id="searchWrapper" class="fixedContainer no-radius">
-	<div class="">
-        <div class="logo" style="display:none;">
-           <img src="/static/img/{{type if type else 'default'}}/picture1.png">
-        </div>
-    	<div id="search" class="search">
-    		<form id="searchF" name="searchF" method="get" action="/search">
-    			<div class="searchBoxOutter">
-    				<div id="searchBoxInner" class="searchBoxInner">
-    					<div id="searchBox" class="searchBox">
-    						<input id="searchI" name="searchI" type="text" autocomplete="off" value="" placeholder="搜索">
-    					</div>
-    				</div>
-    			</div>
-    			<div id="searchBtnC">
-					<button id="searchBtn" class="searchBtn">
-						<span class="searchBtnIcon"></span>
-					</button>
+	<div id="search" class="search">
+		<span class="logo"></span>
+		<form id="searchF" name="searchF" method="get" action="/search">
+			<div class="searchBoxOutter">
+				<div id="searchBoxInner" class="searchBoxInner">
+					<div id="searchBox" class="searchBox">
+						<input id="searchI" name="searchI" type="text" autocomplete="off" value="" placeholder="搜索">
+					</div>
 				</div>
-    		</form>
-    	</div>
+			</div>
+			<div id="searchBtnC">
+				<button id="searchBtn" class="searchBtn">
+					<span class="searchBtnIcon"></span>
+				</button>
+			</div>
+		</form>
 	</div>
 </header>
 <article class="fixedContainer"> 
