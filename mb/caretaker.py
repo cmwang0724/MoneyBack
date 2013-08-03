@@ -26,3 +26,9 @@ class Caretaker(object):
         web.config.debug = False
         app = web.application(urls, globals())
         app.run()
+        
+    def getWebApp(self):
+        web.webapi.notfound = NotFound
+        web.webapi.internalerror = InternalError
+        web.config.debug = False
+        return web.application(urls, globals()).wsgifunc()
