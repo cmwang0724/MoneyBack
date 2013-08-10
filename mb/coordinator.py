@@ -20,31 +20,35 @@ class Context():
 
 class Home:
     def GET(self):
+        print("hello world")
+        db = web.database(dbn='mysql', db='test', user='root', passwd='asdfgh')
+        print db.select('student', where='id=11')[0]
+        MBLogger.info("hello")
         return _Template.render("home")
 
 class Redirect:
     def GET(self, path):
         web.seeother('/' + path)
-        
+
 class AboutUs:
     def GET(self):
         return _Template.render("about_us")
-        
+
 class Pretty(object):
     def handleError(self, message, errno):
         MBLogger.error(message)
         self.handle(errno)
-    
+
     def handle(self, errno):
         web.seeother('/error/' + str(errno))
-        
+
     def handle404(self):
         return _Template.render("page_404")
 
     def handle500(self):
         return _Template.render("page_500")
-    
-#以好看的样式处理错误    
+
+#以好看的样式处理错误
 _Pretty = Pretty()
 
 class Error:
@@ -58,14 +62,14 @@ class Error:
         }
     def GET(self, errno):
         return self._mapping[str(errno)]()
-        
+
 class _NotFound(HTTPError):
     """`404 Not Found` error."""
     def __init__(self):
         status = '404 Not Found'
         headers = {'Content-Type': 'text/html'}
         HTTPError.__init__(self, status, headers, _Pretty.handle404())
-        
+
 class _InternalError(HTTPError):
     """500 Internal Server Error`."""
     def __init__(self):
