@@ -23,7 +23,7 @@ class Home:
         print("hello world")
         db = web.database(dbn='mysql', db='test', user='root', passwd='asdfgh')
         print db.select('student', where='id=11')[0]
-        MBLogger.info("hello")
+        MBLogger.info("hello world from aaron")
         return _Template.render("home")
 
 class Redirect:
